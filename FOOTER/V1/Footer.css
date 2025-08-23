@@ -1,0 +1,35 @@
+.footer {
+  padding: 1px;
+  margin: 20px auto;
+  background-color: brown;
+  font-family: ink free;
+  border-radius: 5px;
+  box-shadow: white;
+  font-size: 18px;
+  border: 1px solid gray;
+}
+
+.date {
+  padding-left: 15px;
+}
+.date :hover {
+  color: gray;
+  font-size: 18.2px;
+  pointer: hand;
+}
+
+.footer-elements {
+  font-weight: medium;
+  color: gray;
+  position: relative;
+  padding-left: 15px;
+  display: grid;
+}
+
+.footer-elements :hover {
+  color: pink;
+  transition: color 0.3s ease;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 2px;
+}
