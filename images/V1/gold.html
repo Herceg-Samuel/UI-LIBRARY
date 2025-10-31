@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Veritas Generation — Marble & Gold + Particles</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        background: #0d0c0c;
+        font-family: "Playfair Display", serif;
+        color: #f5f3ed;
+        overflow: hidden;
+      }
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+      }
+
+      /* Ambient golden aura */
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 1600px;
+        height: 1600px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 215, 134, 0.18),
+          transparent 70%
+        );
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(120px);
+        z-index: 0;
+      }
+
+      /* Marble Masked Text */
+      .masked-title {
+        font-size: 130px;
+        font-weight: 900;
+        line-height: 1.05;
+        background: url("https://images.unsplash.com/photo-1523712999610-f77fbcfc3843")
+          center/cover no-repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        z-index: 2;
+        position: relative;
+      }
+
+      .subtitle {
+        font-family: "Montserrat", sans-serif;
+        margin-top: 16px;
+        font-size: 20px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: #d6c8a9;
+        opacity: 0.85;
+        z-index: 2;
+        position: relative;
+      }
+
+      .cta {
+        margin-top: 45px;
+        padding: 14px 48px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: 1.5px solid #c9b38a;
+        background: rgba(20, 18, 16, 0.4);
+        color: #e6dcc8;
+        cursor: pointer;
+        transition: 0.3s;
+        z-index: 2;
+        position: relative;
+      }
+
+      .cta:hover {
+        background: rgba(255, 223, 158, 0.12);
+        border-color: #f1d79f;
+        transform: translateY(-3px);
+      }
+
+      /* --- Floating Dust Particles Layer --- */
+      .particles {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .particle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: rgba(255, 240, 200, 0.35);
+        border-radius: 50%;
+        filter: blur(2px);
+        animation: float linear infinite;
+        opacity: 0.35;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(120vh) translateX(0);
+          opacity: 0;
+        }
+        30% {
+          opacity: 0.4;
+        }
+        100% {
+          transform: translateY(-20vh) translateX(20px);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="particles">
+        <!-- duplicate particle divs for more density -->
+        <div
+          class="particle"
+          style="left: 10%; animation-duration: 9s; animation-delay: 0s"
+        ></div>
+        <div
+          class="particle"
+          style="left: 30%; animation-duration: 14s; animation-delay: 2s"
+        ></div>
+        <div
+          class="particle"
+          style="left: 50%; animation-duration: 12s; animation-delay: 4s"
+        ></div>
+        <div
+          class="particle"
+          style="left: 70%; animation-duration: 10s; animation-delay: 1s"
+        ></div>
+        <div
+          class="particle"
+          style="left: 90%; animation-duration: 15s; animation-delay: 3s"
+        ></div>
+      </div>
+
+      <div class="masked-title">Veritas<br />Generation</div>
+      <div class="subtitle">In Lumine Tuo Vidimus Lucem</div>
+      <button class="cta">Enter</button>
+    </section>
+  </body>
+</html>

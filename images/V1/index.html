@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Masked Text</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+      }
+
+      .masked-text {
+        font-size: 150px;
+        font-weight: 800;
+        font-family: ink free;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+          center/cover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.7));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="masked-text">Veritas<br />Generation</div>
+  </body>
+</html>
